@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodBear.AppPage.ProfilePage"
+             Shell.NavBarIsVisible="False"
+             Title="ProfilePage"
+             BackgroundColor="#E5E5E5">
+
+    <StackLayout>
+
+        <!--Welcome tab bar-->
+        <Grid>
+            <BoxView HeightRequest="55" Color="#D69E6D" />
+            <Image Source="icon_acc2.png" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+
+            <Label Text="Welcome" FontSize="18" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="40,0,0,-8" />
+        </Grid>
+            
+            <!-- Body section -->
+        <StackLayout Padding="20">
+
+
+            <Label Text="Gneneral" FontSize="13" FontAttributes="Bold" Margin="0,30,0,-10"/>
+            <!--Notifications-->
+            <Label Text="Notifications" FontSize="18" FontAttributes="Bold" Margin="0, 20, 0, 10" />
+            <!--<Switch IsToggled="True" />-->
+            <Label Text="new messages" />
+
+            <!--Language-->
+            <Label Text="Language" FontSize="18" FontAttributes="Bold" Margin="0, 20, 0, 0" />
+            <Picker Title="Select Language">
+                <Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Spanish</x:String>
+                    <x:String>French</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!--Terms and Conditions-->
+            <Label Text="Terms and Conditions" FontSize="18" FontAttributes="Bold" Margin="0, 20, 0, 10" />
+            <Label Text="By using this app you agree to our Terms and Conditions." FontSize="13" Margin="0, 0, 0, 10" />
+            <Button Text="Terms and Conditions" TextColor="Black"  BackgroundColor="white" />
+
+            <!--Privacy Policy-->
+            <Label Text="Privacy Policy" FontSize="18" FontAttributes="Bold" Margin="0, 20, 0, 10" />
+            <Label Text="Privacy Policy for more information." FontSize="13" Margin="0, 0, 0, 10" />
+            <Button Text="Privacy Policy" TextColor="Black"  BackgroundColor="white" />
+
+            <!--Version Bar-->
+            <StackLayout   
+                Padding="100"
+                Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Version 1.0.0" FontSize="12"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>

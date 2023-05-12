@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodBear.Admin.AdminPage"
+             Title="AdminPage">
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Button Text="Upload Food" Command="{Binding TakePhotoCommand}" />
+
+            <CollectionView ItemsSource="{Binding PhotoItems}"
+                            x:Name="collectionView">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="3" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Image Source="{Binding PhotoPath}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" Grid.Row="0" />
+
+                            <StackLayout Grid.Row="1" Spacing="5">
+                                <Entry Placeholder="Name" Text="{Binding Name, Mode=TwoWay}" />
+                                <Entry Placeholder="Introduce" Text="{Binding Introduce, Mode=TwoWay}" />
+                                <Entry Placeholder="Price" Text="{Binding Price, StringFormat='{0:F2}', Mode=TwoWay}" Keyboard="Numeric" />
+                            </StackLayout>
+
+                            <Button Text="Delete" CornerRadius="50" Command="{Binding BindingContext.DeleteCommand, Source={x:Reference collectionView}}" CommandParameter="{Binding}" Grid.Row="2" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

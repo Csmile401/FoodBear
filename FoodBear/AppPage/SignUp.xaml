@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodBear.AppPage.SignUp"
+             Title="SignUp"
+             BackgroundColor="#FAFAFC">
+
+    <StackLayout Margin="20">
+        
+        <Label Text="Create an account" 
+               FontSize="Large" 
+               FontAttributes="Bold" 
+               Margin="0,20" />
+
+        <Entry Placeholder="Full Name" 
+               x:Name="NameEntry" />
+        
+        <Entry Placeholder="Email Address" 
+               Keyboard="Email" x:Name="EmailEntry" />
+        
+        <Entry Placeholder="Password" 
+               IsPassword="True" 
+               x:Name="PasswordEntry" />
+        
+        <Entry Placeholder="Confirm Password" 
+               IsPassword="True" 
+               x:Name="ConfirmPasswordEntry" />
+        
+        <Entry Placeholder="Phone Number" 
+               Keyboard="Telephone" 
+               x:Name="PhoneEntry" />
+        
+        <Label Text="Date of Birth" 
+               FontSize="Medium" 
+               Margin="0,10,0,0" />
+
+        <DatePicker x:Name="BirthdatePicker" />
+        
+        <StackLayout Orientation="Horizontal" 
+                     Margin="0,5">
+            <CheckBox x:Name="AgreeCheckBox" />
+            <Label Text="I agree to the terms and conditions." 
+                   VerticalOptions="Center" Margin="10,0,0,0" />
+        </StackLayout>
+
+        <Button Text="Sign Up" TextColor="White" Margin="0,10" Clicked="OnSignUpButtonClicked" />
+    </StackLayout>
+
+</ContentPage>

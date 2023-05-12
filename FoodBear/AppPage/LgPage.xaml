@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodBear.AppPage.LgPage"
+             Title="FoodBear"
+             BackgroundColor="#FAFAFC">
+
+    <ScrollView>
+
+        <StackLayout  Margin="20">
+
+        <Image
+                Source="foodbear.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Margin="0,0,0,-10"/>
+
+        <Label Text="Welcome to FoodBear" 
+               FontSize="Large"
+               FontAttributes="Bold" Margin="0,20" />
+
+        <Entry Placeholder="Email Address" 
+               Keyboard="Email" 
+               x:Name="EmailEntry" />
+        
+        <Entry Placeholder="Password" 
+               IsPassword="True" 
+               x:Name="PasswordEntry" />
+
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            
+            <CheckBox x:Name="RememberMeCheckBox" />
+            <Label Text="Remember me" 
+                   VerticalOptions="Center" 
+                   Margin="10,0,0,0" />
+            
+        </StackLayout>
+
+        <Button Text="Login" 
+                TextColor="White" BackgroundColor="#D69E6D" Margin="0,20" 
+                Clicked="OnLoginButtonClicked" />
+        
+        <Button Text="Register" BackgroundColor="Gray"
+                TextColor="White" Margin="0,-10" 
+                Clicked="OnSignUpButtonClicked" />
+
+        <Label Text="Forgot your password?"
+               FontSize="Medium" TextColor="#2196F3" 
+               Margin="5,30" TextDecorations="Underline" />
+
+        <Label Text="By continuing you agree to our Terms, Conditions and Privacy Policy"
+               TextColor="Black"
+               FontSize="Medium"
+               Margin="5,-20" />
+
+         </StackLayout>
+    
+    </ScrollView>
+</ContentPage>

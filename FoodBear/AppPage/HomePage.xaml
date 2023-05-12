@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodBear.AppPage.HomePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#E5E5E5">
+
+    <StackLayout>
+        
+        <!--Welcome tab bar-->
+        <Grid>
+            <BoxView HeightRequest="55" Color="#D69E6D" />
+            <Image Source="icon_acc2.png" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+
+            <Label Text="Welcome" FontSize="18" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="40,0,0,-8" />
+        </Grid>
+
+        <!--CarouselView scrollview-->
+        <StackLayout>
+            <CarouselView x:Name="carouselView">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"
+                                SnapPointsType="MandatorySingle"
+                                SnapPointsAlignment="Center" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding Source}" 
+                       HeightRequest="225"
+                       WidthRequest="325" 
+                       Aspect="AspectFit"/>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+
+
+        <!--table of food choose-->
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center" RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid HorizontalOptions="Center" VerticalOptions="Center" ColumnSpacing="20" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Orientation="Vertical">
+                    <Button WidthRequest="60" HeightRequest="60" BackgroundColor="White" Clicked="MartClicked" ImageSource="mart.png"/>
+                    <Label Text="Mart" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Orientation="Vertical">
+                    <Button WidthRequest="60" HeightRequest="60" BackgroundColor="White" Clicked="OrderClicked" ImageSource="order.png"/>
+                    <Label Text="Order" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Column="2" Orientation="Vertical">
+                    <Button WidthRequest="60" HeightRequest="60" BackgroundColor="White" Clicked="FoodClicked" ImageSource="food.png"/>
+                    <Label Text="Food" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+        <!--What's Happening-->
+        <StackLayout>
+            <Label Text="What's Happening" FontSize="20" FontAttributes="Bold" Margin="12,-35,0,10"/>
+        </StackLayout>
+        
+        <!--Image Grid-->
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="End" RowSpacing="21" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid HorizontalOptions="Center" VerticalOptions="EndAndExpand" RowSpacing="0" />
+                <Grid VerticalOptions="EndAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />  
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Source="ads1.png" BackgroundColor="White" Aspect="AspectFit" HeightRequest="225" Margin="10,0,10,0" VerticalOptions="End" />
+                    <Label Grid.Column="0" Text="Hot Meals" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+
+                    <Image Grid.Column="1" Source="ads2.png" BackgroundColor="White" Aspect="AspectFit" HeightRequest="225" Margin="10,0,10,0" VerticalOptions="End"/>
+                    <Label Grid.Column="1" Text="Hot Meals" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+                </Grid>
+            </Grid>
+        </Grid>
+ 
+
+        <!-- Bottom tab bar -->
+        <Grid Grid.Row="1" BackgroundColor="White" VerticalOptions="End" RowSpacing="-10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <BoxView HeightRequest="10" />
+            <Button Grid.Column="0" Text="Home" TextColor="Black" BackgroundColor="White"  Clicked="OnTab1Clicked" CornerRadius="20" ImageSource="icon_home.png" />
+            <Button Grid.Column="1" Text="Cart" TextColor="Black" BackgroundColor="White"  Clicked="OnTab2Clicked" CornerRadius="20" ImageSource="icon_cart.png"/>
+            <Button Grid.Column="2" Text="Account" TextColor="Black" BackgroundColor="White" Clicked="OnTab3Clicked" CornerRadius="20" ImageSource="icon_acc.png"/>
+        </Grid>
+         
+
+    </StackLayout> 
+    
+    
+</ContentPage>
