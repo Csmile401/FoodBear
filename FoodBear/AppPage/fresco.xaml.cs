@@ -1,8 +1,9 @@
 using MySqlConnector;
 using System.Collections.ObjectModel;
+
 namespace FoodBear.AppPage;
 
-public partial class OrderPage : ContentPage
+public partial class fresco : ContentPage
 {
     public class FoodItem
     {
@@ -15,9 +16,9 @@ public partial class OrderPage : ContentPage
 
     private ObservableCollection<FoodItem> foodItems = new ObservableCollection<FoodItem>();
 
-    public OrderPage()
-	{
-		InitializeComponent();
+    public fresco()
+    {
+        InitializeComponent();
         // Set the binding context
         BindingContext = this;
 

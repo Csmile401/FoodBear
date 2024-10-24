@@ -10,7 +10,7 @@
 
         <!--Welcome tab bar-->
         <Grid>
-            <BoxView HeightRequest="55" Color="#D69E6D" />
+            <BoxView HeightRequest="55" Color="#512BD4" />
             <Image Source="icon_acc2.png" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
 
             <Label Text="Welcome" FontSize="18" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="40,0,0,-8" />

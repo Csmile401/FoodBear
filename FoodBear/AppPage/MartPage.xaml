@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodBear.AppPage.MartPage"
              BackgroundColor="#E5E5E5"
-             Title="Mart">
+             Title="Restaurant">
     <ScrollView>
         <StackLayout>
             <Grid>
@@ -45,15 +45,15 @@
 
                     <StackLayout Grid.Row="1" Grid.Column="0">
                         <Image Source="image3.png" BackgroundColor="White" Aspect="AspectFit" HeightRequest="200" Margin="10,0,10,0" VerticalOptions="End"/>
-                        <Label Text="Hot shop 2" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+                        <Label Text="Hot shop 3" HorizontalTextAlignment="Center" VerticalOptions="End"/>
                         <Button Text="Click" HeightRequest="40" WidthRequest="180" Margin="10,0,10,20" Clicked="Button3_Clicked"/>
                     </StackLayout>
 
-                    <StackLayout Grid.Row="1" Grid.Column="1">
+                    <!--<StackLayout Grid.Row="1" Grid.Column="1">
                         <Image Source="image4.png" BackgroundColor="White" Aspect="AspectFit" HeightRequest="200" Margin="10,0,10,0" VerticalOptions="End"/>
                         <Label Text="Hot shop 4" HorizontalTextAlignment="Center" VerticalOptions="End"/>
                         <Button Text="Click" HeightRequest="40" WidthRequest="180" Margin="10,0,10,20" Clicked="Button4_Clicked"/>
-                    </StackLayout>
+                    </StackLayout>-->
                 </Grid>
         
         </StackLayout>

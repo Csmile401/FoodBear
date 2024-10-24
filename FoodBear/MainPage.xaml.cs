@@ -15,7 +15,7 @@ public partial class MainPage : ContentPage
     {
         {
             // Replace with your MySQL connection string
-            string connectionString = "server=192.168.0.156;port=3306;user id=root;password=;database=foodbear";
+            string connectionString = "server=192.168.0.155;user=root;password=;database=foodbear";
 
             // Create a new MySQL connection
             MySqlConnection connection = new MySqlConnection(connectionString);

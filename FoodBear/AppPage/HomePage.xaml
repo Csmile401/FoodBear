@@ -9,7 +9,7 @@
         
         <!--Welcome tab bar-->
         <Grid>
-            <BoxView HeightRequest="55" Color="#D69E6D" />
+            <BoxView HeightRequest="55" Color="#512BD4" />
             <Image Source="icon_acc2.png" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
 
             <Label Text="Welcome" FontSize="18" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="40,0,0,-8" />
@@ -41,9 +41,9 @@
 
 
         <!--table of food choose-->
-        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center" RowSpacing="30">
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center" RowSpacing="40">
             <Grid.RowDefinitions>
-                <RowDefinition Height="75" />
+                <RowDefinition Height="78" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -55,7 +55,7 @@
                 </Grid.ColumnDefinitions>
                 <StackLayout Grid.Column="0" Orientation="Vertical">
                     <Button WidthRequest="60" HeightRequest="60" BackgroundColor="White" Clicked="MartClicked" ImageSource="mart.png"/>
-                    <Label Text="Mart" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+                    <Label Text="Shop" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
                 </StackLayout>
                 <StackLayout Grid.Column="1" Orientation="Vertical">
                     <Button WidthRequest="60" HeightRequest="60" BackgroundColor="White" Clicked="OrderClicked" ImageSource="order.png"/>
@@ -70,11 +70,11 @@
 
         <!--What's Happening-->
         <StackLayout>
-            <Label Text="What's Happening" FontSize="20" FontAttributes="Bold" Margin="12,-35,0,10"/>
+            <Label Text="What's Happening" FontSize="25" FontAttributes="Bold" Margin="12,-35,0,10"/>
         </StackLayout>
         
         <!--Image Grid-->
-        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="End" RowSpacing="21" >
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="End" RowSpacing="8" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -108,7 +108,7 @@
 
             <BoxView HeightRequest="10" />
             <Button Grid.Column="0" Text="Home" TextColor="Black" BackgroundColor="White"  Clicked="OnTab1Clicked" CornerRadius="20" ImageSource="icon_home.png" />
-            <Button Grid.Column="1" Text="Cart" TextColor="Black" BackgroundColor="White"  Clicked="OnTab2Clicked" CornerRadius="20" ImageSource="icon_cart.png"/>
+            <Button Grid.Column="1" Text="Receipt" TextColor="Black" BackgroundColor="White"  Clicked="OnTab2Clicked" CornerRadius="20" ImageSource="icon_cart.png"/>
             <Button Grid.Column="2" Text="Account" TextColor="Black" BackgroundColor="White" Clicked="OnTab3Clicked" CornerRadius="20" ImageSource="icon_acc.png"/>
         </Grid>
          

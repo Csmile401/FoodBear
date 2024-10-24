@@ -12,10 +12,11 @@ public partial class MartPage : ContentPage
 
     private async void Button1_Clicked(object sender, EventArgs e)
     {
-        //await Navigation.PushAsync(new MartPage());
+        await Navigation.PushAsync(new fresco());
     }
     private async void Button2_Clicked(object sender, EventArgs e)
     {
+        
         //await Navigation.PushAsync(new OrderPage());
     }
     private async void Button3_Clicked(object sender, EventArgs e)
